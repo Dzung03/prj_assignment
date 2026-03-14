@@ -1,0 +1,204 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* MAIN LAYOUT */
+.survey-layout { 
+    flex: 1; 
+    display: flex; 
+    overflow: hidden; 
+}
+
+/* FORM PANEL */
+.form-panel {
+    width: 400px;
+    flex-shrink: 0;
+    background: #fff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+
+    /* SCROLL */
+    overflow-y: auto;
+    height: 100vh;
+
+    /* Ẩn scrollbar Firefox */
+    scrollbar-width: none;
+}
+
+/* Ẩn scrollbar Chrome, Edge, Safari */
+.form-panel::-webkit-scrollbar {
+    display: none;
+}
+
+.form-header {
+    padding: 1.3rem 1.4rem;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.form-header h2 { 
+    font-size: 1.05rem; 
+    font-weight: 700; 
+}
+
+.form-header p  { 
+    font-size: .8rem; 
+    color: #94a3b8; 
+    margin-top: .3rem; 
+}
+
+.form-body { 
+    padding: 1.2rem 1.4rem; 
+    flex: 1; 
+}
+
+.form-group { 
+    margin-bottom: 1rem; 
+}
+
+.form-group label {
+    display: block;
+    font-size: .78rem; 
+    font-weight: 600;
+    color: #374151; 
+    margin-bottom: .35rem;
+}
+
+.form-group .required { 
+    color: #ef4444; 
+}
+
+.form-control {
+    width: 100%; 
+    padding: .58rem .85rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px; 
+    font-size: .87rem;
+    color: #0f172a; 
+    outline: none;
+    background: #f8fafc;
+    transition: border-color .18s, box-shadow .18s;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,.1);
+    background: #fff;
+}
+
+textarea.form-control { 
+    resize: vertical; 
+    min-height: 80px; 
+}
+
+.map-hint {
+    font-size: .75rem; 
+    color: #64748b;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: .5rem .75rem;
+    margin-bottom: 1rem;
+    display: flex; 
+    align-items: center; 
+    gap: .4rem;
+}
+
+.address-row { 
+    display: flex; 
+    gap: .5rem; 
+    align-items: center; 
+}
+
+.address-row .form-control { 
+    flex: 1; 
+}
+
+.btn-locate {
+    padding: .58rem .8rem;
+    background: #3b82f6; 
+    color: #fff;
+    border: none; 
+    border-radius: 8px;
+    font-size: .85rem; 
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background .2s;
+    white-space: nowrap;
+}
+
+.btn-locate:hover { 
+    background: #2563eb; 
+}
+
+.coords-display {
+    font-size: .73rem; 
+    color: #64748b;
+    margin-top: .3rem;
+    padding: .3rem .5rem;
+    background: #f8fafc;
+    border-radius: 5px;
+}
+
+.form-footer {
+    padding: 1rem 1.4rem;
+    border-top: 1px solid #f1f5f9;
+    flex-shrink: 0;
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: #fff;
+    padding: .75rem;
+    border: none; 
+    border-radius: 8px;
+    font-size: .92rem; 
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter .2s, transform .2s;
+}
+
+.btn-submit:hover { 
+    filter: brightness(1.08); 
+    transform: translateY(-1px); 
+}
+
+/* MAP PANEL */
+#map { 
+    flex: 1; 
+}
+
+/* Marker pin */
+.pin { 
+    text-align: center; 
+    line-height: 1; 
+}
+
+/* Alert */
+.alert-success {
+    background: #dcfce7; 
+    color: #166534;
+    border: 1px solid #86efac;
+    border-radius: 8px; 
+    padding: .7rem 1rem;
+    font-size: .85rem; 
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: none;
+}

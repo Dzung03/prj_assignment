@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+.sidebar{
+    width:68px;
+    height:100vh;
+
+    background:linear-gradient(180deg,#0f2027,#1a3a4a,#0d2b3e);
+
+    display:flex;
+    flex-direction:column;
+
+    transition:width .3s ease;
+
+    overflow:hidden;
+
+    font-family:'Be Vietnam Pro','Segoe UI',sans-serif;
+}
+
+/* expand */
+
+.sidebar:hover{
+    width:260px;
+}
+
+/* HEADER */
+
+.sb-header{
+    display:flex;
+    align-items:center;
+
+    padding:18px 16px;
+    gap:12px;
+
+    min-height:70px;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.sb-logo-icon{
+    width:36px;
+    height:36px;
+
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+
+    background:linear-gradient(135deg,#00c8b4,#0078a8);
+    color:white;
+}
+
+.sb-logo-text{
+    opacity:0;
+    width:0;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    transition:.2s;
+}
+
+.sidebar:hover .sb-logo-text{
+    opacity:1;
+    width:auto;
+}
+
+.sb-logo-name{
+    color:white;
+    font-weight:800;
+    font-size:16px;
+}
+
+.sb-logo-role{
+    color:#00c8b4;
+    font-size:11px;
+}
+
+/* MENU */
+
+.sb-menu{
+    flex:1;
+
+    overflow:hidden;
+}
+
+/* khi hover mới cho scroll */
+
+.sidebar:hover .sb-menu{
+    overflow-y:auto;
+}
+
+/* GROUP LABEL */
+
+.sb-group-label{
+    padding:10px 18px;
+
+    font-size:11px;
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:#00c8b4;
+
+    opacity:0;
+    height:0;
+    margin:0;
+
+    overflow:hidden;
+}
+
+.sidebar:hover .sb-group-label{
+    opacity:.7;
+    height:auto;
+}
+
+/* DIVIDER */
+
+.sb-group-divider{
+    height:0;
+    margin:0;
+
+    background:rgba(255,255,255,0.08);
+
+    opacity:0;
+}
+
+.sidebar:hover .sb-group-divider{
+    height:1px;
+    margin:8px 12px;
+    opacity:1;
+}
+
+/* ITEM */
+
+.sb-item{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+    height:50px;
+
+    color:rgba(255,255,255,0.7);
+
+    text-decoration:none;
+
+    border-left:3px solid transparent;
+
+    transition:.2s;
+}
+
+/* ICON */
+
+.sb-item-icon{
+    width:24px;
+    height:24px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+}
+
+/* LABEL */
+
+.sb-item-label{
+    opacity:0;
+    width:0;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    transition:.2s;
+
+    font-size:14px;
+}
+
+/* hover expand */
+
+.sidebar:hover .sb-item{
+    justify-content:flex-start;
+    padding-left:18px;
+    gap:12px;
+}
+
+.sidebar:hover .sb-item-label{
+    opacity:1;
+    width:auto;
+}
+
+/* hover */
+
+.sb-item:hover{
+    background:rgba(255,255,255,0.06);
+    color:white;
+}
+
+/* active */
+
+.sb-item.active{
+    background:rgba(0,200,180,0.15);
+    border-left-color:#00c8b4;
+    color:white;
+}
+
+/* FOOTER */
+
+.sb-footer{
+    padding:14px 16px;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.sb-avatar{
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#00c8b4;
+
+    color:white;
+
+    font-weight:700;
+}
+
+.sb-user-info{
+    opacity:0;
+    width:0;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    transition:.2s;
+}
+
+.sidebar:hover .sb-user-info{
+    opacity:1;
+    width:auto;
+}
+
+.sb-user-name{
+    color:white;
+    font-size:13px;
+}
+
+.sb-user-email{
+    color:#00c8b4;
+    font-size:11px;
+}
